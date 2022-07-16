@@ -12,6 +12,10 @@ from jinja2 import TemplateNotFound
 def new():
     return 'ok'    
 
+@blueprint.route('/new2')
+def new2():
+    return render_template("home/my-page.html")
+
 @blueprint.route('/index')
 @login_required
 def index():
